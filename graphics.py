@@ -17,7 +17,6 @@ class Window:
     def draw_line(self, line, fill_color="black"):
         line.draw(self.__canvas, fill_color)
 
-
     def wait_for_close(self):
         self.__running = True
         while self.__running:
@@ -37,7 +36,7 @@ class Line:
         self.p1 = p1
         self.p2 = p2
 
-    def draw(canvas, fill_color="black"):
+    def draw(self, canvas, fill_color="black"):
         canvas.create_line(
             self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=2
         )
